@@ -1,0 +1,82 @@
+{
+    "houses": {
+        "fb223386-d252-43cd-9482-c8a3a78afdeb": {
+            "location": "91730",
+            "latlong": {
+                "latitude_degrees_north": 34.0965313,
+                "longitude_degrees_west": 117.5848025
+            },
+            "house_access_token": "090128d0-81dc-426a-b2b6-31a2b5e00fb4",
+            "house_name": "Home",
+            "local_tz": -25200,
+            "rooms": {
+                "21a4440e-d033-4d55-926f-546dd62c0ead": {
+                    "room_name": "Front Porch",
+                    "logical_loads": {
+                        "35dda4e8-01fe-4ab2-8f3c-892aa72015ba": {
+                            "logical_load_name": "Front Porch",
+                            "lightpads": {
+                                "1ca652b5-ac76-40bd-b817-51350a6c29bd": {
+                                    "config": {
+                                        "slowFadeTime": 15000,
+                                        "touchRate": 0.5,
+                                        "rid": "21a4440e-d033-4d55-926f-546dd62c0ead",
+                                        "cluster": "production",
+                                        "hid": "fb223386-d252-43cd-9482-c8a3a78afdeb",
+                                        "uuid": "1ca652b5-ac76-40bd-b817-51350a6c29bd",
+                                        "logRemote": false,
+                                        "forceGlow": false,
+                                        "houseConfig": {
+                                            "accessToken": "090128d0-81dc-426a-b2b6-31a2b5e00fb4",
+                                            "rid": "21a4440e-d033-4d55-926f-546dd62c0ead",
+                                            "hid": "fb223386-d252-43cd-9482-c8a3a78afdeb",
+                                            "house": {
+                                                "21a4440e-d033-4d55-926f-546dd62c0ead": {
+                                                    "35dda4e8-01fe-4ab2-8f3c-892aa72015ba": [
+                                                        "1ca652b5-ac76-40bd-b817-51350a6c29bd"
+                                                    ]
+                                                }
+                                            },
+                                            "llid": "35dda4e8-01fe-4ab2-8f3c-892aa72015ba"
+                                        },
+                                        "houseHash": "1d57b3c08ee956c0472d74ae69d4b9ec",
+                                        "occupancyAction": "undefined",
+                                        "occupancyTimeout": 600,
+                                        "fadeOffTime": 500,
+                                        "glowIntensity": 1,
+                                        "name": "",
+                                        "fadeOnTime": 500,
+                                        "llid": "35dda4e8-01fe-4ab2-8f3c-892aa72015ba",
+                                        "defaultLevel": 128,
+                                        "glowTracksDimmer": false,
+                                        "dimEnabled": false,
+                                        "glowFade": 1000,
+                                        "amqpEnabled": true,
+                                        "trackingSpeed": 1000,
+                                        "minimumLevel": 40,
+                                        "versionLocked": false,
+                                        "glowTimeout": 5,
+                                        "rememberLastDimLevel": false,
+                                        "serialNumber": "162700937",
+                                        "pirSensitivity": 175,
+                                        "glowEnabled": true,
+                                        "glowColor": {
+                                            "white": 0,
+                                            "red": 3,
+                                            "green": 229,
+                                            "blue": 226
+                                        },
+                                        "maxWattage": 420
+                                    },
+                                    "is_provisioned": true,
+                                    "custom_gestures": 0,
+                                    "lightpad_name": "1ca652b5-ac76-40bd-b817-51350a6c29bd"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
