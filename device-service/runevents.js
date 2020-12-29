@@ -1,6 +1,7 @@
-var DeviceEvent = require("./deviceevent")
-var LightPad = require('./lightpad');
-var log4js = require('log4js');
+const DeviceEvent = require("./deviceevent")
+const LightPad = require('./lightpad');
+const log4js = require('log4js');
+const express = require('express');
 
 log4js.configure({
   appenders: {
@@ -27,12 +28,50 @@ log4js.configure({
   }
 });
 
+// main()
 const logger = log4js.getLogger("main");
 logger.info("Starting");
 
 const TICK_INTERVAL = 10000;
 const LIGHT_ON = "LIGHT_ON";
 const LIGHT_OFF = "LIGHT_OFF";
+
+var lightPad = new LightPad();
+setInterval(intervalFunc, TICK_INTERVAL);
+
+
+// -----------------------------------------------------------------------
+// Web Service
+// -----------------------------------------------------------------------
+
+const server = express();
+const port = 3000
+
+server.get('/', (req, res) => {
+  res.send('This is the device service')
+});
+
+server.post('/api/light-on/', (req, res) => {
+  logger.info("Light ON command received");
+  lightPad.turnOnLight();
+  res.send('Light turned on');
+});
+
+server.post('/api/light-off/', (req, res) => {
+  logger.info("Light OFF command received");
+  lightPad.turnOffLight();
+  res.send('Light turned off');
+});
+
+server.listen(port, () => {
+  logger.info(`Device web service listening at http://localhost:${port}`)
+})
+
+// -----------------------------------------------------------------------
+
+
+
+
 
 // Schedule of all events
 var deviceEvents = [
@@ -54,10 +93,6 @@ function intervalFunc() {
     }
   });
 }
-
-// main()
-var lightPad = new LightPad();
-setInterval(intervalFunc, TICK_INTERVAL);
 
 // Invoke an event. Here is where we turn on/off the light, etc.
 function doEvent(event) {

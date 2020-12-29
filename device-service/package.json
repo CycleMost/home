@@ -5,6 +5,7 @@
   "main": "runevents.js",
   "dependencies": {
     "axios": "^0.21.1",
+    "express": "^4.17.1",
     "log4js": "^6.3.0",
     "suncalc": "^1.8.0"
   },
