@@ -14,18 +14,21 @@ log4js.configure({
         type: 'pattern',
         pattern: '%d [%p] %c %m'
       }
-    }
+    },
+    console: { 
+      type: 'console' 
+    } 
   },
   categories: {
     default: { 
-      appenders: [ 'everything' ], 
+      appenders: [ 'everything', 'console' ], 
       level: 'debug'
     }
   }
 });
 
 const logger = log4js.getLogger("main");
-logger.info("Starting", logger);
+logger.info("Starting");
 
 const TICK_INTERVAL = 10000;
 const LIGHT_ON = "LIGHT_ON";

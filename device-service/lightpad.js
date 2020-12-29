@@ -25,7 +25,10 @@ class LightPad {
         }
       });
 
-      logger.debug("LightPad Client", this.client);
+      this.getLightStatus(function(response) {
+        logger.debug("Light Status:", response.data.level > 0 ? "ON" : "OFF");
+      });
+      
     }
   
     /**
